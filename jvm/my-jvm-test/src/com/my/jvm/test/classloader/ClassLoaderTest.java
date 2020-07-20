@@ -1,4 +1,4 @@
-package com.my.parent;
+package com.my.jvm.test.classloader;
 
 /**
  * @author Zijian Liao
