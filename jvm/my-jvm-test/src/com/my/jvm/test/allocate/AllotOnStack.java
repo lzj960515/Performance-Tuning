@@ -23,8 +23,12 @@ public class AllotOnStack {
 
     private static void alloc() {
         User user = new User();
+        user.name = "a";
+        user.age = 10;
     }
 
     static class User{
+        String name;
+        int age;
     }
 }
