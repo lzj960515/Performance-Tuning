@@ -1,6 +1,6 @@
 package com.my.jvm.test.classloader;
 
-import sun.net.www.ParseUtil;
+//import sun.net.www.ParseUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -81,10 +81,11 @@ public class MyClassLoader extends URLClassLoader {
             var0 = var0.getCanonicalFile();
         } catch (IOException var3) {
         }
-        try {
+        /*try {
             return ParseUtil.fileToEncodedURL(var0);
         } catch (MalformedURLException var2) {
             throw new InternalError(var2);
-        }
+        }*/
+        return null;
     }
 }
