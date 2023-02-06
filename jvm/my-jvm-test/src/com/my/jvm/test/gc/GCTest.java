@@ -3,11 +3,13 @@ package com.my.jvm.test.gc;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 调优作业一
+ */
 public class GCTest {
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(30);
         while (true) {
-            Thread.sleep(10L);
             executorService.execute(GCTest::alloc);
         }
     }
@@ -16,7 +18,6 @@ public class GCTest {
         User user = new User();
         user.id = 1;
         user.name = "zhangsan";
-
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
@@ -28,7 +29,7 @@ public class GCTest {
 class User {
 
     /**
-     * 1m对象
+     * 4m对象
      */
     private Byte[] bytes = new Byte[1024 * 1024];
 
