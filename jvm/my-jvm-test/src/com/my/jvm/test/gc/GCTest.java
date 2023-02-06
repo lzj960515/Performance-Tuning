@@ -7,7 +7,7 @@ public class GCTest {
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(30);
         while (true) {
-            Thread.sleep(10);
+            Thread.sleep(10L);
             executorService.execute(GCTest::alloc);
         }
     }
@@ -17,11 +17,11 @@ public class GCTest {
         user.id = 1;
         user.name = "zhangsan";
 
-    /*    try {
+        try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
 
     }
 }
