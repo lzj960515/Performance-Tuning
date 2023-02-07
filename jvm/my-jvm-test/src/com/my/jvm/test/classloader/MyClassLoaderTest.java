@@ -13,10 +13,10 @@ public class MyClassLoaderTest {
 
     public static void main(String[] args) throws Exception {
 //        MyClassLoader myClassLoader = new MyClassLoader();
-        String path = "D:\\学习笔记\\架构师学习之路_笔记\\性能调优\\jvm\\my-jvm-test\\out\\production\\my-jvm-test";
+        String path = "/Users/liaozijian/work/kq-project/kq-generator-demo/pig-keep/target/classes";
         MyClassLoaderSample myClassLoader = new MyClassLoaderSample(path);
 
-        Class<?> math = myClassLoader.loadClass("com.my.jvm.test.classloader.Math");
+        Class<?> math = myClassLoader.loadClass("com.lzj.pig.controller.BillRecordController");
         Method compute = math.getDeclaredMethod("compute");
         Object result = compute.invoke(math.newInstance());
         System.out.println(result);

@@ -29,7 +29,7 @@ public class GCTest {
 class User {
 
     /**
-     * 1m对象
+     * 4m对象
      */
     private Byte[] bytes = new Byte[1024 * 1024];
 

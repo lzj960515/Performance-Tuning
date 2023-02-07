@@ -1,6 +1,6 @@
 package com.my.jvm.test.classloader;
 
-import sun.misc.Launcher;
+//import sun.misc.Launcher;
 
 import java.net.URL;
 
@@ -14,7 +14,7 @@ public class ClassLoaderLoadPathTest {
 
     public static void main(String[] args) {
         System.out.println(String.class.getClassLoader());
-        System.out.println(com.sun.crypto.provider.DESKeyFactory.class.getClassLoader().getClass().getName());
+//        System.out.println(com.sun.crypto.provider.DESKeyFactory.class.getClassLoader().getClass().getName());
         System.out.println(ClassLoaderLoadPathTest.class.getClassLoader().getClass().getName());
 
         System.out.println();
@@ -27,10 +27,10 @@ public class ClassLoaderLoadPathTest {
 
         System.out.println();
         System.out.println("bootstrapLoader加载以下文件：");
-        URL[] urls = Launcher.getBootstrapClassPath().getURLs();
-        for (int i = 0; i < urls.length; i++) {
-            System.out.println(urls[i]);
-        }
+//        URL[] urls = Launcher.getBootstrapClassPath().getURLs();
+//        for (int i = 0; i < urls.length; i++) {
+//            System.out.println(urls[i]);
+//        }
 
         System.out.println();
         System.out.println("extClassloader加载以下文件：");

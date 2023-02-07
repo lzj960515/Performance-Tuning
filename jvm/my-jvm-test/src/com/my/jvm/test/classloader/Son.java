@@ -11,4 +11,8 @@ public class Son extends Father {
         System.out.println("init son");
     }
 
+    public Son () {
+        System.out.println("son construction");
+    }
+
 }
